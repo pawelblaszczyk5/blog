@@ -17,15 +17,17 @@
 
 		return {
 			status: 404,
-			error: new Error(`Could not load blog post ${input.page.params.uid}`)
+			error: new Error(`Could not load blog post by id ${input.page.params.uid}`)
 		};
 	};
 </script>
 
 <script lang="ts">
+	import PrismicDom from 'prismic-dom';
+
 	export let post: Document;
 </script>
 
 <div>
-	{JSON.stringify(post)}
+	{@html PrismicDom.RichText.asHtml(post.data.content)}
 </div>
