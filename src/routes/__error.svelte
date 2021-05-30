@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import type { ErrorLoadInput, LoadInput, LoadOutput } from '@sveltejs/kit/types/page';
+	import type { ErrorLoadInput, LoadOutput } from '@sveltejs/kit/types/page';
 
 	export const load = (input: ErrorLoadInput): LoadOutput => {
 		return {

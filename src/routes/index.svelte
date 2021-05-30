@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Home</title>
+	<title>Home | Paweł Błaszczyk</title>
 </svelte:head>
 
 <p>Hello</p>

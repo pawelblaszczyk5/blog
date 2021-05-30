@@ -28,6 +28,10 @@
 	export let post: Document;
 </script>
 
+<svelte:head>
+	<title>{post.data.title} | Paweł Błaszczyk</title>
+</svelte:head>
+
 <div>
 	{@html PrismicDom.RichText.asHtml(post.data.content)}
 </div>
