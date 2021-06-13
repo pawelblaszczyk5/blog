@@ -4,6 +4,7 @@
 	import '@fontsource/source-sans-pro/400.css';
 	import '@fontsource/source-sans-pro/600.css';
 	import { onMount } from 'svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	onMount(() => {
 		const darkMode = localStorage.getItem('darkMode');
@@ -20,6 +21,7 @@
 </script>
 
 <main>
+	<Header />
 	<slot />
 </main>
 
@@ -33,8 +35,8 @@
 		--sansSerifFont: 'Source Sans Pro', sans-serif;
 		--backgroundColor: #fdfffc;
 		--fontColor: #011627;
-		--primaryAccentColor: #2ec4b6;
-		--secondaryAccentColor: #e71d36;
+		--primaryAccentColor: #e71d36;
+		--secondaryAccentColor: #2ec4b6;
 
 		font-family: var(--serifFont);
 		background-color: var(--backgroundColor);
@@ -42,14 +44,51 @@
 	}
 
 	:global(body.dark) {
-		--backgroundColor: #0a1128;
-		--fontColor: #fefcfb;
-		--primaryAccentColor: #034078;
-		--secondaryAccentColor: #1282a2;
+		--backgroundColor: #011627;
+		--fontColor: #fdfffc;
+		--primaryAccentColor: #e71d36;
+		--secondaryAccentColor: #2ec4b6;
 	}
 
 	main {
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 1rem;
+	}
+
+	:global(a.link) {
+		position: relative;
+		font-weight: 700;
+		color: inherit;
+		text-decoration: none;
+		padding-bottom: 0.25rem;
+		border-bottom: 3px solid var(--secondaryAccentColor);
+		transition: border-bottom-color steps(1, jump-end) 0.4s;
+	}
+
+	:global(a.link:hover) {
+		border-bottom-color: transparent;
+		transition: none;
+	}
+
+	:global(a.link::after) {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 3px;
+		left: 0;
+		bottom: -3px;
+		background-color: var(--primaryAccentColor);
+		transition: width ease-in-out 0.2s;
+	}
+
+	:global(a.link:hover::after) {
+		width: 100%;
+	}
+
+	@media screen and (min-width: 500px) {
+		main {
+			padding: 1.5rem;
+		}
 	}
 </style>
