@@ -31,4 +31,8 @@
 	console.log(posts);
 </script>
 
+<svelte:head>
+	<title>Blog | Paweł Błaszczyk</title>
+</svelte:head>
+
 <section>test</section>

@@ -14,4 +14,8 @@
 	export let title: string;
 </script>
 
+<svelte:head>
+	<title>Something went wrong | Paweł Błaszczyk</title>
+</svelte:head>
+
 <h1>{title}</h1>
