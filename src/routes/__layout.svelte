@@ -20,10 +20,12 @@
 	});
 </script>
 
-<main>
+<div>
 	<Header />
-	<slot />
-</main>
+	<main>
+		<slot />
+	</main>
+</div>
 
 <style>
 	:root {
@@ -50,7 +52,7 @@
 		--secondaryAccentColor: #2ec4b6;
 	}
 
-	main {
+	div {
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 1rem;
@@ -87,7 +89,7 @@
 	}
 
 	@media screen and (min-width: 500px) {
-		main {
+		div {
 			padding: 1.5rem;
 		}
 	}
