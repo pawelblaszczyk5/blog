@@ -44,12 +44,14 @@
 
 	p {
 		font-family: var(--sansSerifFont);
-		font-size: 1.0625rem;
+		font-size: 1.125rem;
 		margin: 0.5rem 0;
 	}
 
 	img {
 		display: none;
+		background-color: white;
+		margin: 10px;
 	}
 
 	@media screen and (min-width: 500px) {
