@@ -32,19 +32,7 @@
 </ul>
 
 <style>
-	h1 {
-		font-weight: 700;
-		font-size: 1.75rem;
-	}
-
-	h2 {
-		font-weight: 600;
-		font-size: 1.5rem;
-	}
-
 	p {
-		font-family: var(--sansSerifFont);
-		font-size: 1.125rem;
 		margin: 0.5rem 0;
 	}
 
