@@ -27,6 +27,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.2.2",
+		"@fontsource/playfair-display": "^4.4.5",
+		"@fontsource/source-sans-pro": "^4.4.5",
 		"@lukeed/uuid": "^2.0.0",
 		"@types/prismic-dom": "^2.1.1",
 		"cookie": "^0.4.1"
