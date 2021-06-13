@@ -48,7 +48,7 @@ a.link {
 	text-decoration: none;
 	padding-bottom: 0.25rem;
 	border-bottom: 3px solid var(--secondaryAccentColor);
-	transition: border-bottom-color steps(1, jump-end) 0.4s;
+	transition: border-bottom-color ease-in-out 0.8s;
 }
 
 a.link:hover {
