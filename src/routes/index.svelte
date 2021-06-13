@@ -13,6 +13,8 @@
 	where I'd like to share my thoughts about the past, present, and future of the web development
 	landmark. I always look forward to seeing new and innovative things happen on the web. Currently,
 	I'm a hell of enthusiastic about Svelte and what it'll bring into modern front-end development.
+	Moreover, I'm always excited about Typescript and the direction in which the JavaScript world is
+	evolving.
 </p>
 <p>
 	I'm fond of simplifying (sometimes even oversimplifying) things, making the web as accessible as
