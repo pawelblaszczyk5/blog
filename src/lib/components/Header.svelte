@@ -4,7 +4,7 @@
 
 <header>
 	<nav>
-		<a class="link" href="/blog">Blog</a>
+		<a class="link" href="/blog/page/1">Blog</a>
 		<a href="/"><img src={monkeyLogoSrc} alt="Monkey logo" /></a>
 		<a class="link" href="/about">About</a>
 	</nav>
