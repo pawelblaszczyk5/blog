@@ -35,7 +35,6 @@
 <style>
 	h1 {
 		text-align: center;
-		font-family: var(--sansSerifFont);
 		font-weight: 600;
 		font-size: 2.5rem;
 	}
