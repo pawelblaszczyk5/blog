@@ -4,9 +4,9 @@
 
 <header>
 	<nav>
-		<a class="link" href="/blog/page/1">Blog</a>
+		<div><a class="link" href="/blog/page/1">Blog</a></div>
 		<a href="/" title="Front page"><img src={monkeyLogoSrc} alt="Monkey logo" /></a>
-		<a class="link" href="/about">About</a>
+		<div><a class="link" href="/about">About</a></div>
 	</nav>
 </header>
 
@@ -22,6 +22,11 @@
 
 	a {
 		font-size: 1.5rem;
+	}
+
+	div {
+		width: 100px;
+		text-align: center;
 	}
 
 	img {
