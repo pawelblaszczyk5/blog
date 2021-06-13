@@ -58,6 +58,10 @@
 		padding: 1rem;
 	}
 
+	main {
+		margin: 1rem 0;
+	}
+
 	:global(a.link) {
 		position: relative;
 		font-weight: 700;
@@ -91,6 +95,10 @@
 	@media screen and (min-width: 500px) {
 		div {
 			padding: 1.5rem;
+		}
+
+		main {
+			margin: 1.5rem 0;
 		}
 	}
 </style>
