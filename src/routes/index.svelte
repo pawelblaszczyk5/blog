@@ -1,12 +1,12 @@
 <script lang="ts">
-	import photo from '../assets/photo.jpg';
+	import photoSrc from '../assets/photo.jpg';
 </script>
 
 <svelte:head>
 	<title>Home | Paweł Błaszczyk</title>
 </svelte:head>
 
-<img src={photo} alt="Paweł Błaszczyk" />
+<img src={photoSrc} alt="Paweł Błaszczyk" />
 <h1>Hi, welcome to my website!</h1>
 <p>
 	My name is Paweł Błaszczyk, I'm a frontend developer from Poland. It's nice to see you on my blog,
