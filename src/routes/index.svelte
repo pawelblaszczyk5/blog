@@ -27,9 +27,7 @@
 	have a nice day!
 </p>
 <h2>Featured posts</h2>
-<ul>
-	<p>Nothing there yet 🙁</p>
-</ul>
+<p>Nothing there yet 🙁</p>
 
 <style>
 	img {
