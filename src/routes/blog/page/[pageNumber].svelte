@@ -27,8 +27,8 @@
 
 <script lang="ts">
 	import type ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
-	import SinglePost from '$lib/components/SinglePost.svelte';
 	import { page } from '$app/stores';
+	import PostList from '$lib/components/PostList.svelte';
 
 	export let posts: ApiSearchResponse;
 </script>
@@ -38,11 +38,7 @@
 </svelte:head>
 
 <section>
-	{#each posts.results as post}
-		<SinglePost {post} />
-	{:else}
-		<h1>No blog posts found 🙁</h1>
-	{/each}
+	<PostList posts={posts.results} />
 	{#if posts.prev_page || posts.next_page}
 		<nav>
 			{#if posts.prev_page}

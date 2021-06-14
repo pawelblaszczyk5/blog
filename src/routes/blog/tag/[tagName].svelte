@@ -7,10 +7,13 @@
 
 	export const load = async (input: LoadInput): Promise<LoadOutput> => {
 		try {
-			const posts = await prismicClient.query([
-				Prismic.Predicates.at('document.type', 'blog'),
-				Prismic.Predicates.at('document.tags', [input.page.params.tagName])
-			]);
+			const posts = await prismicClient.query(
+				[
+					Prismic.Predicates.at('document.type', 'blog'),
+					Prismic.Predicates.at('document.tags', [input.page.params.tagName])
+				],
+				{ pageSize: 100 }
+			);
 
 			return {
 				props: {
@@ -27,6 +30,9 @@
 </script>
 
 <script lang="ts">
+	import PostList from '$lib/components/PostList.svelte';
+	import { page } from '$app/stores';
+
 	export let posts: ApiSearchResponse;
 </script>
 
@@ -34,4 +40,13 @@
 	<title>Blog | Paweł Błaszczyk</title>
 </svelte:head>
 
-<section>test</section>
+<section>
+	<h1>Posts with tag: {$page.params.tagName}</h1>
+	<PostList posts={posts.results} />
+</section>
+
+<style>
+	h1 {
+		margin: 0.5rem 0;
+	}
+</style>

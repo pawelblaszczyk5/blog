@@ -4,8 +4,6 @@
 	import Tag from './Tag.svelte';
 
 	export let post: Post;
-
-	console.log(post);
 </script>
 
 <article>
