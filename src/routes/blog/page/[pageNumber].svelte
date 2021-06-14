@@ -1,5 +1,4 @@
 <script lang="ts" context="module">
-	import type ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
 	import type { LoadInput, LoadOutput } from '@sveltejs/kit/types/page';
 
 	import { prismicClient } from '$lib/constants/prismicClient';
@@ -27,12 +26,44 @@
 </script>
 
 <script lang="ts">
+	import type ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
+	import SinglePost from '$lib/components/SinglePost.svelte';
+	import { page } from '$app/stores';
+
 	export let posts: ApiSearchResponse;
-	console.log(posts);
 </script>
 
 <svelte:head>
 	<title>Blog | Paweł Błaszczyk</title>
 </svelte:head>
 
-<section>test</section>
+<section>
+	{#each posts.results as post}
+		<SinglePost {post} />
+	{/each}
+	<nav>
+		{#if posts.prev_page}
+			<a class="link navLink--prev" href="/blog/page/{Number($page.params.pageNumber) - 1}"
+				>Previous</a
+			>
+		{/if}
+		{#if posts.next_page}
+			<a class="link navLink--next" href="/blog/page/{Number($page.params.pageNumber) + 1}">Next</a>
+		{/if}
+	</nav>
+</section>
+
+<style>
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.navLink--prev {
+		margin-right: auto;
+	}
+
+	.navLink--next {
+		margin-left: auto;
+	}
+</style>
