@@ -2,8 +2,15 @@
 	import type { Document as Post } from '@prismicio/client/types/documents';
 
 	import Tag from './Tag.svelte';
+	import CalendarIcon from './CalendarIcon.svelte';
 
 	export let post: Post;
+
+	const dateFormatter = new Intl.DateTimeFormat('en-GB', {});
+
+	const formatDate = (date: string): string => {
+		return dateFormatter.format(new Date(date));
+	};
 </script>
 
 <article>
@@ -15,8 +22,13 @@
 			{/each}
 		</div>
 	{/if}
-	<p>{post.data.description}</p>
-	<a class="link readLink" sveltekit:prefetch href="/blog/post/{post.uid}">Read</a>
+	<p class="description">{post.data.description}</p>
+	<div class="articleInfo">
+		<p class="articleInfo__date">
+			<CalendarIcon />&nbsp;&nbsp;{formatDate(post.first_publication_date || '')}
+		</p>
+		<a class="link articleInfo__link" sveltekit:prefetch href="/blog/post/{post.uid}">Read</a>
+	</div>
 </article>
 
 <style>
@@ -27,19 +39,29 @@
 		padding: 0.5rem;
 	}
 	div {
-		margin: 1rem 0 0.5rem;
+		margin: 0.5rem 0;
 		display: flex;
 		gap: 0.5rem;
 	}
 
-	p {
+	.description {
 		font-size: 1rem;
 	}
 
-	.readLink {
+	.articleInfo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.articleInfo__date {
+		display: flex;
+		align-items: center;
+		font-family: var(--sansSerifFont);
+		font-size: 0.875rem;
+	}
+	.articleInfo__link {
 		display: block;
 		width: max-content;
-		margin-left: auto;
-		font-size: 0.875rem;
 	}
 </style>
