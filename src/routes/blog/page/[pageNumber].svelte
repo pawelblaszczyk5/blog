@@ -7,7 +7,7 @@
 	export const load = async (input: LoadInput): Promise<LoadOutput> => {
 		try {
 			const posts = await prismicClient.query(Prismic.Predicates.at('document.type', 'blog'), {
-				pageSize: 1,
+				pageSize: 3,
 				page: Number(input.page.params.pageNumber)
 			});
 
@@ -40,23 +40,33 @@
 <section>
 	{#each posts.results as post}
 		<SinglePost {post} />
+	{:else}
+		<h1>No blog posts found 🙁</h1>
 	{/each}
-	<nav>
-		{#if posts.prev_page}
-			<a class="link navLink--prev" href="/blog/page/{Number($page.params.pageNumber) - 1}"
-				>Previous</a
-			>
-		{/if}
-		{#if posts.next_page}
-			<a class="link navLink--next" href="/blog/page/{Number($page.params.pageNumber) + 1}">Next</a>
-		{/if}
-	</nav>
+	{#if posts.prev_page || posts.next_page}
+		<nav>
+			{#if posts.prev_page}
+				<a class="link navLink--prev" href="/blog/page/{Number($page.params.pageNumber) - 1}"
+					>Previous</a
+				>
+			{/if}
+			{#if posts.next_page}
+				<a class="link navLink--next" href="/blog/page/{Number($page.params.pageNumber) + 1}"
+					>Next</a
+				>
+			{/if}
+		</nav>
+	{/if}
 </section>
 
 <style>
+	h1 {
+		margin: 0.5rem 0;
+	}
 	nav {
 		display: flex;
 		justify-content: space-between;
+		margin-top: 2rem;
 	}
 
 	.navLink--prev {
