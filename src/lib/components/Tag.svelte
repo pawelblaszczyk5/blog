@@ -2,7 +2,7 @@
 	export let tag: string;
 </script>
 
-<a sveltekit:prefetch href="/blog/{tag}/page/1">{tag}</a>
+<a sveltekit:prefetch href="/blog/tag/{tag}/page/1">{tag}</a>
 
 <style>
 	a {
