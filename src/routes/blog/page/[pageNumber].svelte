@@ -56,9 +56,6 @@
 </section>
 
 <style>
-	h1 {
-		margin: 0.5rem 0;
-	}
 	nav {
 		display: flex;
 		justify-content: space-between;

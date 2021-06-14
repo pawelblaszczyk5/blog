@@ -10,3 +10,9 @@
 {:else}
 	<h1>No blog posts found 🙁</h1>
 {/each}
+
+<style>
+	h1 {
+		margin: 0.5rem 0;
+	}
+</style>
