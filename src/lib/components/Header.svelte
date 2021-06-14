@@ -4,9 +4,11 @@
 
 <header>
 	<nav>
-		<div><a class="link" href="/blog/page/1">Blog</a></div>
-		<a href="/" title="Front page"><img src={monkeyLogoSrc} alt="Monkey logo" /></a>
-		<div><a class="link" href="/about">About</a></div>
+		<div><a sveltekit:prefetch class="link" href="/blog/page/1">Blog</a></div>
+		<a sveltekit:prefetch href="/" title="Front page"
+			><img src={monkeyLogoSrc} alt="Monkey logo" /></a
+		>
+		<div><a sveltekit:prefetch class="link" href="/about">About</a></div>
 	</nav>
 </header>
 
