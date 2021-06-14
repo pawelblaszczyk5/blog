@@ -32,10 +32,6 @@
 </ul>
 
 <style>
-	p {
-		margin: 0.5rem 0;
-	}
-
 	img {
 		display: none;
 		background-color: white;

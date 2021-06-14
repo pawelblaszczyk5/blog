@@ -17,6 +17,7 @@ h2 {
 p {
 	font-family: var(--sansSerifFont);
 	font-size: 1.125rem;
+	margin: 0.5rem 0;
 }
 
 body {
