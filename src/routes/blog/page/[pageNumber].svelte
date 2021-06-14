@@ -2,12 +2,13 @@
 	import type { LoadInput, LoadOutput } from '@sveltejs/kit/types/page';
 
 	import { prismicClient } from '$lib/constants/prismicClient';
+	import { postsPerPage } from '$lib/constants/postsPerPage';
 	import Prismic from '@prismicio/client';
 
 	export const load = async (input: LoadInput): Promise<LoadOutput> => {
 		try {
 			const posts = await prismicClient.query(Prismic.Predicates.at('document.type', 'blog'), {
-				pageSize: 3,
+				pageSize: postsPerPage,
 				page: Number(input.page.params.pageNumber)
 			});
 
@@ -27,8 +28,8 @@
 
 <script lang="ts">
 	import type ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
-	import { page } from '$app/stores';
 	import PostList from '$lib/components/PostList.svelte';
+	import PostNav from '$lib/components/PostNav.svelte';
 
 	export let posts: ApiSearchResponse;
 </script>
@@ -38,35 +39,6 @@
 </svelte:head>
 
 <section>
-	<PostList posts={posts.results} />
-	{#if posts.prev_page || posts.next_page}
-		<nav>
-			{#if posts.prev_page}
-				<a class="link navLink--prev" href="/blog/page/{Number($page.params.pageNumber) - 1}"
-					>Previous</a
-				>
-			{/if}
-			{#if posts.next_page}
-				<a class="link navLink--next" href="/blog/page/{Number($page.params.pageNumber) + 1}"
-					>Next</a
-				>
-			{/if}
-		</nav>
-	{/if}
+	<PostList {posts} />
+	<PostNav {posts} />
 </section>
-
-<style>
-	nav {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 2rem;
-	}
-
-	.navLink--prev {
-		margin-right: auto;
-	}
-
-	.navLink--next {
-		margin-left: auto;
-	}
-</style>

@@ -3,6 +3,7 @@
 	import type { LoadInput, LoadOutput } from '@sveltejs/kit/types/page';
 
 	import { prismicClient } from '$lib/constants/prismicClient';
+	import { postsPerPage } from '$lib/constants/postsPerPage';
 	import Prismic from '@prismicio/client';
 
 	export const load = async (input: LoadInput): Promise<LoadOutput> => {
@@ -12,7 +13,7 @@
 					Prismic.Predicates.at('document.type', 'blog'),
 					Prismic.Predicates.at('document.tags', [input.page.params.tagName])
 				],
-				{ pageSize: 100 }
+				{ pageSize: postsPerPage, page: Number(input.page.params.pageNumber) }
 			);
 
 			return {
@@ -31,6 +32,7 @@
 
 <script lang="ts">
 	import PostList from '$lib/components/PostList.svelte';
+	import PostNav from '$lib/components/PostNav.svelte';
 	import { page } from '$app/stores';
 
 	export let posts: ApiSearchResponse;
@@ -42,7 +44,8 @@
 
 <section>
 	<h1>Posts with tag: {$page.params.tagName}</h1>
-	<PostList posts={posts.results} />
+	<PostList {posts} />
+	<PostNav {posts} />
 </section>
 
 <style>

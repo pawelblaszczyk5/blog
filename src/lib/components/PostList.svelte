@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { Document as Post } from '@prismicio/client/types/documents';
+	import type ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
 	import SinglePost from './SinglePost.svelte';
 
-	export let posts: Array<Post>;
+	export let posts: ApiSearchResponse;
 </script>
 
-{#each posts as post}
+{#each posts.results as post}
 	<SinglePost {post} />
 {:else}
 	<h1>No blog posts found 🙁</h1>
