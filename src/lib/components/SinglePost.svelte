@@ -9,7 +9,7 @@
 </script>
 
 <article>
-	<h2><a class="link" sveltekit:prefetch href="/blog/post/{post.uid}">{post.data.title}</a></h2>
+	<h1><a class="link" sveltekit:prefetch href="/blog/post/{post.uid}">{post.data.title}</a></h1>
 	{#if post.tags.length}
 		<div>
 			{#each post.tags as tag}
@@ -27,11 +27,11 @@
 </article>
 
 <style>
-	h2 {
+	h1 {
 		margin-bottom: 1rem;
 	}
 	article {
-		padding: 0.5rem;
+		margin: 1rem 0;
 	}
 	div {
 		margin: 0.5rem 0;
