@@ -3,21 +3,9 @@
 
 	import Tag from './Tag.svelte';
 	import CalendarIcon from './CalendarIcon.svelte';
+	import { formatDate } from '$lib/helpers/dateTimeFormatter';
 
 	export let post: Post;
-
-	const dateFormatter = new Intl.DateTimeFormat('en-GB', {
-		year: 'numeric',
-		month: 'numeric',
-		day: 'numeric',
-		hour: 'numeric',
-		minute: 'numeric',
-		second: 'numeric'
-	});
-
-	const formatDate = (date: string): string => {
-		return dateFormatter.format(new Date(date));
-	};
 </script>
 
 <article>
