@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c03ab1e7-311c-4214-b045-151d9870e3a6/deploy-status)](https://app.netlify.com/sites/pawel-blaszczyk-blog/deploys)
 
+[![Paweł Błaszczyk Blog](https://i.imgur.com/i3w6eOV.png)](https://pawel-blaszczyk-blog.netlify.app/)
+
 This site is my personal blog, built using SvelteKit and deployed to Netlify as SSG site. That's my learning experience with SvelteKit and I was really enjoying it.
 
 ## Check it out
