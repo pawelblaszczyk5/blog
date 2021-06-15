@@ -39,7 +39,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog | Paweł Błaszczyk</title>
+	<title>{$page.params.tagName} | Paweł Błaszczyk</title>
 </svelte:head>
 
 <section>
