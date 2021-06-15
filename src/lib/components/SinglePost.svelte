@@ -6,7 +6,14 @@
 
 	export let post: Post;
 
-	const dateFormatter = new Intl.DateTimeFormat('en-GB', {});
+	const dateFormatter = new Intl.DateTimeFormat('en-GB', {
+		year: 'numeric',
+		month: 'numeric',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric',
+		second: 'numeric'
+	});
 
 	const formatDate = (date: string): string => {
 		return dateFormatter.format(new Date(date));
