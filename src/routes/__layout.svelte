@@ -64,7 +64,7 @@
 	.pageContainer {
 		max-width: 800px;
 		margin: 0 auto;
-		padding: 1rem;
+		padding: 1rem 1rem 3rem;
 	}
 
 	main {
@@ -95,7 +95,7 @@
 
 	@media screen and (min-width: 500px) {
 		.pageContainer {
-			padding: 1.5rem;
+			padding: 1.5rem 1.5rem 3rem;
 		}
 
 		main {
