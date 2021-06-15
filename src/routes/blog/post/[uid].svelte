@@ -120,5 +120,8 @@
 
 	.article__content :global(pre) {
 		font-family: 'Fira CodeVariable', monospace;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 </style>
