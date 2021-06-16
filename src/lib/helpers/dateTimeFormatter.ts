@@ -3,8 +3,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-GB', {
 	month: 'numeric',
 	day: 'numeric',
 	hour: 'numeric',
-	minute: 'numeric',
-	second: 'numeric'
+	minute: 'numeric'
 });
 
 export const formatDate = (date: string): string => {
