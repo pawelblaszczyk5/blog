@@ -42,22 +42,22 @@
 	<Header />
 	<main>
 		<slot />
+		<button
+			on:click={changeDarkModeStatus}
+			class="darkModeSwitcher"
+			aria-label="Switch color theme to {darkModeStatus ? 'light' : 'dark'}"
+		>
+			{#if darkModeStatus}
+				<div transition:scale class="darkModeSwitcher__iconContainer">
+					<SunIcon />
+				</div>
+			{:else}
+				<div transition:scale class="darkModeSwitcher__iconContainer">
+					<MoonIcon />
+				</div>
+			{/if}
+		</button>
 	</main>
-	<button
-		on:click={changeDarkModeStatus}
-		class="darkModeSwitcher"
-		aria-label="Switch color theme to {darkModeStatus ? 'light' : 'dark'}"
-	>
-		{#if darkModeStatus}
-			<div transition:scale class="darkModeSwitcher__iconContainer">
-				<SunIcon />
-			</div>
-		{:else}
-			<div transition:scale class="darkModeSwitcher__iconContainer">
-				<MoonIcon />
-			</div>
-		{/if}
-	</button>
 </div>
 
 <style>
@@ -80,17 +80,18 @@
 		border: 2px solid var(--secondaryAccentColor);
 		padding: 0.5rem;
 		color: var(--fontColor);
-		display: grid;
 		border-radius: 8px;
+		width: 2.25rem;
+		height: 2.25rem;
 	}
 
 	.darkModeSwitcher__iconContainer {
-		grid-column-start: 1;
-		grid-column-end: 1;
-		grid-row-start: 1;
-		grid-row-end: 1;
 		width: 1.25rem;
 		height: 1.25rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
 	}
 
 	@media screen and (min-width: 500px) {
