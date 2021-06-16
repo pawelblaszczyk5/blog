@@ -1,1 +1,1 @@
-export const postsPerPage = 5;
+export const POSTS_PER_PAGE = 5;

@@ -3,7 +3,7 @@
 	import type { LoadInput, LoadOutput } from '@sveltejs/kit/types/page';
 
 	import { prismicClient } from '$lib/constants/prismicClient';
-	import { postsPerPage } from '$lib/constants/postsPerPage';
+	import { POSTS_PER_PAGE } from '$lib/constants/postsPerPage';
 	import Prismic from '@prismicio/client';
 
 	export const load = async (input: LoadInput): Promise<LoadOutput> => {
@@ -13,7 +13,7 @@
 					Prismic.Predicates.at('document.type', 'blog'),
 					Prismic.Predicates.at('document.tags', [input.page.params.tagName])
 				],
-				{ pageSize: postsPerPage, page: Number(input.page.params.pageNumber) }
+				{ pageSize: POSTS_PER_PAGE, page: Number(input.page.params.pageNumber) }
 			);
 
 			return {
