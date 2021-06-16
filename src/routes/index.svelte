@@ -27,13 +27,30 @@
 	have a nice day!
 </p>
 <h2>Featured posts</h2>
-<p>Nothing there yet 🙁</p>
+<ul class="featuredPosts">
+	<li class="featuredPosts__element">
+		<a
+			sveltekit:prefetch
+			class="link"
+			href="/blog/post/how-i-became-a-better-developer-through-coding-emails"
+			>How I became a better developer through coding emails</a
+		>
+	</li>
+</ul>
 
 <style>
 	.photo {
 		display: none;
 		background-color: white;
 		margin: 10px;
+	}
+
+	.featuredPosts {
+		list-style-position: inside;
+	}
+
+	.featuredPosts__element {
+		margin: 0.5rem 0;
 	}
 
 	@media screen and (min-width: 500px) {
