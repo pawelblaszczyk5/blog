@@ -18,9 +18,9 @@
 	<title>Something went wrong 🙁</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<h1 class="error__heading">{status}</h1>
 
-<h2>
+<h2 class="error__details">
 	{#if status < 500 && status >= 400}
 		The page you're trying to request is not existing or you do not have access to view it. Use
 		navigation to continue browsing the website.
@@ -33,13 +33,13 @@
 </h2>
 
 <style>
-	h1 {
+	.error__heading {
 		text-align: center;
 		font-weight: 600;
 		font-size: 2.5rem;
 	}
 
-	h2 {
+	.error__details {
 		text-align: center;
 		font-weight: 400;
 		margin: 0.5rem 0;

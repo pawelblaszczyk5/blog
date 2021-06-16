@@ -4,10 +4,13 @@
 
 <h1>About</h1>
 <p>You can always find and contact me in the below places:</p>
-<ul>
+<ul class="placesList">
 	<li>
-		<a target="_blank" rel="external" href="https://github.com/pawelblaszczyk5/" class="link"
-			>Github</a
+		<a
+			target="_blank"
+			rel="external"
+			href="https://github.com/pawelblaszczyk5/"
+			class="link placesList__link">Github</a
 		>
 	</li>
 	<li>
@@ -15,7 +18,7 @@
 			target="_blank"
 			rel="external"
 			href="https://www.linkedin.com/in/pawel-blaszczyk/"
-			class="link">LinkedIn</a
+			class="link placesList__link">LinkedIn</a
 		>
 	</li>
 	<li>
@@ -27,21 +30,17 @@
 		target="_blank"
 		href="https://www.instagram.com/ada_guzik/"
 		rel="external"
-		class="link">here</a
+		class="link placesList__link">here</a
 	>.
 </p>
 
 <style>
-	ul {
+	.placesList {
 		list-style-position: inside;
 	}
 
-	a {
+	.placesList__link {
 		margin: 0.5rem 0;
 		display: inline-block;
-	}
-
-	a {
-		font-family: var(--serifFont);
 	}
 </style>

@@ -6,7 +6,7 @@
 	<title>Home | Paweł Błaszczyk</title>
 </svelte:head>
 
-<img src={photoSrc} alt="Paweł Błaszczyk" />
+<img class="photo" src={photoSrc} alt="Paweł Błaszczyk" />
 <h1>Hi, welcome to my website!</h1>
 <p>
 	My name is Paweł Błaszczyk, I'm a frontend developer from Poland. It's nice to see you on my blog,
@@ -30,14 +30,14 @@
 <p>Nothing there yet 🙁</p>
 
 <style>
-	img {
+	.photo {
 		display: none;
 		background-color: white;
 		margin: 10px;
 	}
 
 	@media screen and (min-width: 500px) {
-		img {
+		.photo {
 			display: initial;
 			float: right;
 			shape-outside: circle();

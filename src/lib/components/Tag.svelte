@@ -2,10 +2,10 @@
 	export let tag: string;
 </script>
 
-<a sveltekit:prefetch href="/blog/tag/{tag}/page/1">{tag}</a>
+<a class="tag" sveltekit:prefetch href="/blog/tag/{tag}/page/1">{tag}</a>
 
 <style>
-	a {
+	.tag {
 		display: inline-block;
 		text-decoration: none;
 		border: 2px solid var(--secondaryAccentColor);
@@ -16,7 +16,7 @@
 		transition: border-color ease-in-out 0.4s;
 	}
 
-	a:hover {
+	.tag:hover {
 		border-color: var(--primaryAccentColor);
 	}
 </style>

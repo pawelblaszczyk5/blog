@@ -44,6 +44,7 @@ body.dark {
 }
 
 a.link {
+	font-family: var(--serifFont);
 	position: relative;
 	font-weight: 700;
 	line-height: 1.5;

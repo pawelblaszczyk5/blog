@@ -7,18 +7,18 @@
 </script>
 
 {#if posts.prev_page || posts.next_page}
-	<nav>
+	<nav class="nav">
 		{#if posts.prev_page}
 			<a
 				sveltekit:prefetch
-				class="link navLink--prev"
+				class="link nav__link--prev"
 				href={(Number($page.params.pageNumber) - 1).toString()}>Previous</a
 			>
 		{/if}
 		{#if posts.next_page}
 			<a
 				sveltekit:prefetch
-				class="link navLink--next"
+				class="link nav__link--next"
 				href={(Number($page.params.pageNumber) + 1).toString()}>Next</a
 			>
 		{/if}
@@ -26,17 +26,17 @@
 {/if}
 
 <style>
-	nav {
+	.nav {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 2rem;
 	}
 
-	.navLink--prev {
+	.nav__link--prev {
 		margin-right: auto;
 	}
 
-	.navLink--next {
+	.nav__link--next {
 		margin-left: auto;
 	}
 </style>

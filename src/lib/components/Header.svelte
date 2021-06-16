@@ -3,17 +3,21 @@
 </script>
 
 <header>
-	<nav>
-		<div><a sveltekit:prefetch class="link" href="/blog/page/1">Blog</a></div>
+	<nav class="nav">
+		<div class="nav__linkContainer">
+			<a sveltekit:prefetch class="link nav__link" href="/blog/page/1">Blog</a>
+		</div>
 		<a sveltekit:prefetch href="/" title="Front page"
-			><img src={monkeyLogoSrc} alt="Monkey logo" /></a
+			><img class="nav__logo" src={monkeyLogoSrc} alt="Monkey logo" /></a
 		>
-		<div><a sveltekit:prefetch class="link" href="/about">About</a></div>
+		<div class="nav__linkContainer">
+			<a sveltekit:prefetch class="link nav__link" href="/about">About</a>
+		</div>
 	</nav>
 </header>
 
 <style>
-	nav {
+	.nav {
 		width: 100%;
 		max-width: 600px;
 		margin: 0 auto;
@@ -22,23 +26,23 @@
 		justify-content: space-evenly;
 	}
 
-	a {
+	.nav__link {
 		font-size: 1.5rem;
 	}
 
-	div {
+	.nav__linkContainer {
 		width: 100px;
 		text-align: center;
 	}
 
-	img {
+	.nav__logo {
 		clip-path: circle(45%);
 		width: 100px;
 		height: 100px;
 	}
 
 	@media screen and (min-width: 500px) {
-		a {
+		.nav__link {
 			font-size: 2rem;
 		}
 	}

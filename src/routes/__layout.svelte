@@ -40,7 +40,7 @@
 
 <div class="pageContainer">
 	<Header />
-	<main>
+	<main class="pageContainer__main">
 		<slot />
 		<button
 			on:click={changeDarkModeStatus}
@@ -67,7 +67,7 @@
 		padding: 1rem 1rem 3rem;
 	}
 
-	main {
+	.pageContainer__main {
 		margin: 1rem 0;
 	}
 
@@ -99,7 +99,7 @@
 			padding: 1.5rem 1.5rem 3rem;
 		}
 
-		main {
+		.pageContainer__main {
 			margin: 1.5rem 0;
 		}
 	}

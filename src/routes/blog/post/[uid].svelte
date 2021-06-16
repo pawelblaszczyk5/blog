@@ -45,7 +45,7 @@
 
 <h1>{post.data.title}</h1>
 {#if post.tags.length}
-	<div>
+	<div class="article__tagContainer">
 		{#each post.tags as tag}
 			<Tag {tag} />
 		{/each}
@@ -59,7 +59,7 @@
 </article>
 
 <style>
-	div {
+	.article__tagContainer {
 		margin: 0.5rem 0;
 		display: flex;
 		gap: 0.5rem;

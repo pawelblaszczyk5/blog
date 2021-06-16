@@ -42,14 +42,14 @@
 	<title>{$page.params.tagName} | Paweł Błaszczyk</title>
 </svelte:head>
 
-<section>
-	<h1>Posts with tag: {$page.params.tagName}</h1>
+<section class="taggedPosts">
+	<h1 class="taggedPosts__heading">Posts with tag: {$page.params.tagName}</h1>
 	<PostList {posts} />
 	<PostNav {posts} />
 </section>
 
 <style>
-	h1 {
+	.taggedPosts__heading {
 		margin: 0.5rem 0;
 	}
 </style>
