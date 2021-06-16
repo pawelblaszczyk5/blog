@@ -30,13 +30,12 @@
 	import type ApiSearchResponse from '@prismicio/client/types/ApiSearchResponse';
 	import PostList from '$lib/components/PostList.svelte';
 	import PostNav from '$lib/components/PostNav.svelte';
+	import Meta from '$lib/components/Meta.svelte';
 
 	export let posts: ApiSearchResponse;
 </script>
 
-<svelte:head>
-	<title>Blog | Paweł Błaszczyk</title>
-</svelte:head>
+<Meta title="Blog" />
 
 <section>
 	<PostList {posts} />

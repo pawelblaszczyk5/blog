@@ -1,6 +1,8 @@
-<svelte:head>
-	<title>About | Paweł Błaszczyk</title>
-</svelte:head>
+<script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
+</script>
+
+<Meta title="About" />
 
 <h1>About</h1>
 <p>You can always find and contact me in the below places:</p>

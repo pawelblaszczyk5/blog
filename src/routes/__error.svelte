@@ -11,15 +11,14 @@
 </script>
 
 <script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
+
 	export let status: number;
 </script>
 
-<svelte:head>
-	<title>Something went wrong 🙁</title>
-</svelte:head>
+<Meta title="Something went wrong 🙁" />
 
 <h1 class="error__heading">{status}</h1>
-
 <h2 class="error__details">
 	{#if status < 500 && status >= 400}
 		The page you're trying to request is not existing or you do not have access to view it. Use

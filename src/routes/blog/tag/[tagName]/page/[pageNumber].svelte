@@ -34,13 +34,12 @@
 	import PostList from '$lib/components/PostList.svelte';
 	import PostNav from '$lib/components/PostNav.svelte';
 	import { page } from '$app/stores';
+	import Meta from '$lib/components/Meta.svelte';
 
 	export let posts: ApiSearchResponse;
 </script>
 
-<svelte:head>
-	<title>{$page.params.tagName} | Paweł Błaszczyk</title>
-</svelte:head>
+<Meta title={$page.params.tagName} keywords={[$page.params.tagName]} />
 
 <section class="taggedPosts">
 	<h1 class="taggedPosts__heading">Posts with tag: {$page.params.tagName}</h1>

@@ -35,13 +35,12 @@
 	import Tag from '$lib/components/Tag.svelte';
 	import PrismicDom from 'prismic-dom';
 	import { formatDate } from '$lib/helpers/dateTimeFormatter';
+	import Meta from '$lib/components/Meta.svelte';
 
 	export let post: Document;
 </script>
 
-<svelte:head>
-	<title>{post.data.title} | Paweł Błaszczyk</title>
-</svelte:head>
+<Meta title={post.data.title} description={post.data.description} keywords={post.tags} />
 
 <h1>{post.data.title}</h1>
 {#if post.tags.length}

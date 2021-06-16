@@ -1,10 +1,10 @@
 <script lang="ts">
+	import Meta from '$lib/components/Meta.svelte';
+
 	import photoSrc from '../assets/photo.jpg';
 </script>
 
-<svelte:head>
-	<title>Home | Paweł Błaszczyk</title>
-</svelte:head>
+<Meta title="Home" />
 
 <img class="photo" src={photoSrc} alt="Paweł Błaszczyk" />
 <h1>Hi, welcome to my website!</h1>
