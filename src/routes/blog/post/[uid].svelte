@@ -76,8 +76,8 @@
 		width: 100%;
 	}
 	.article__content :global(img) {
-		display: inline-block;
-		margin: 0 auto;
+		display: block;
+		margin: 2rem auto;
 		max-width: 100%;
 	}
 
