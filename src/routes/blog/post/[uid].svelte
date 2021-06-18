@@ -33,6 +33,7 @@
 <script lang="ts">
 	import CalendarIcon from '$lib/components/CalendarIcon.svelte';
 	import Tag from '$lib/components/Tag.svelte';
+	import Spacer from '$lib/components/Spacer.svelte';
 	import PrismicDom from 'prismic-dom';
 	import { formatDate } from '$lib/helpers/dateTimeFormatter';
 	import Meta from '$lib/components/Meta.svelte';
@@ -46,7 +47,9 @@
 {#if post.tags.length}
 	<div class="article__tagContainer">
 		{#each post.tags as tag}
-			<Tag {tag} />
+			<Spacer y={1} x={1}>
+				<Tag {tag} />
+			</Spacer>
 		{/each}
 	</div>
 {/if}
@@ -59,11 +62,9 @@
 
 <style>
 	.article__tagContainer {
-		margin: 0.5rem 0;
-		display: grid;
-		grid-auto-flow: column;
-		width: fit-content;
-		gap: 0.5rem;
+		margin: 0 -0.25rem;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.article__date {

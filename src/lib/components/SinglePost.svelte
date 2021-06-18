@@ -4,6 +4,7 @@
 	import Tag from './Tag.svelte';
 	import CalendarIcon from './CalendarIcon.svelte';
 	import { formatDate } from '$lib/helpers/dateTimeFormatter';
+	import Spacer from './Spacer.svelte';
 
 	export let post: Post;
 </script>
@@ -15,7 +16,9 @@
 	{#if post.tags.length}
 		<div class="article__tagsContainer">
 			{#each post.tags as tag}
-				<Tag {tag} />
+				<Spacer y={1} x={1}>
+					<Tag {tag} />
+				</Spacer>
 			{/each}
 		</div>
 	{/if}
@@ -36,11 +39,9 @@
 		margin-bottom: 1rem;
 	}
 	.article__tagsContainer {
-		margin: 0.5rem 0;
-		display: grid;
-		grid-auto-flow: column;
-		width: fit-content;
-		gap: 0.5rem;
+		margin: 0 -0.25rem;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.article__description {
