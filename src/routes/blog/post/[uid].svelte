@@ -60,7 +60,9 @@
 <style>
 	.article__tagContainer {
 		margin: 0.5rem 0;
-		display: flex;
+		display: grid;
+		grid-auto-flow: column;
+		width: fit-content;
 		gap: 0.5rem;
 	}
 
