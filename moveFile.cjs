@@ -8,6 +8,6 @@ fs.rename(currentPath, destinationPath, (err) => {
 	if (err) {
 		throw err;
 	} else {
-		console.log('Successfully moved the file!');
+		console.log('Successfully moved the 404 file!');
 	}
 });
