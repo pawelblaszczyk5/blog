@@ -36,6 +36,11 @@
 			>How I became a better developer through coding emails</a
 		>
 	</li>
+	<li class="featuredPosts__element">
+		<a sveltekit:prefetch class="link" href="/blog/post/this-weeks-finds-week-1"
+			>This week's finds (Week 1)
+		</a>
+	</li>
 </ul>
 
 <style>
