@@ -83,6 +83,8 @@
 		border-radius: 8px;
 		width: 2.25rem;
 		height: 2.25rem;
+		transition: all ease-in-out 0.4s;
+		transition-property: color, border-color, background-color;
 	}
 
 	.darkModeSwitcher__iconContainer {

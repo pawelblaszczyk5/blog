@@ -20,9 +20,37 @@ p {
 	margin: 0.5rem 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol {
+	transition: all ease-in-out 0.4s;
+	transition-property: background-color, color, border-color;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a,
+ul > a,
+ol > a,
+li > a,
+p > a {
+	transition: none;
+}
+
 body {
 	font-family: var(--serifFont);
 	background-color: var(--backgroundColor);
+	transition: background-color ease-in-out 0.4s;
 	color: var(--fontColor);
 }
 
@@ -52,7 +80,7 @@ a.link {
 	text-decoration: none;
 	padding-bottom: 0.25rem;
 	border-bottom: 3px solid var(--secondaryAccentColor);
-	transition: border-color ease-in-out 0.4s;
+	transition-property: border-color, color, background-color;
 }
 
 a.link:hover {

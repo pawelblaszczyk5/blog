@@ -13,7 +13,6 @@
 		font-size: 0.75rem;
 		padding: 0.125rem 0.25rem;
 		color: inherit;
-		transition: border-color ease-in-out 0.4s;
 	}
 
 	.tag:hover {
