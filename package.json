@@ -1,6 +1,6 @@
 {
 	"name": "pawel-blaszczyk-blog",
-	"version": "0.0.1",
+	"version": "1.0",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build && node ./scripts/move404Page.js",
