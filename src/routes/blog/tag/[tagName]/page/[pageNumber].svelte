@@ -13,7 +13,11 @@
 					Prismic.Predicates.at('document.type', 'blog'),
 					Prismic.Predicates.at('document.tags', [input.page.params.tagName])
 				],
-				{ pageSize: POSTS_PER_PAGE, page: Number(input.page.params.pageNumber) }
+				{
+					pageSize: POSTS_PER_PAGE,
+					page: Number(input.page.params.pageNumber),
+					orderings: '[document.first_publication_date desc]'
+				}
 			);
 
 			return {

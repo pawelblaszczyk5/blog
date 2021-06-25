@@ -9,7 +9,8 @@
 		try {
 			const posts = await prismicClient.query(Prismic.Predicates.at('document.type', 'blog'), {
 				pageSize: POSTS_PER_PAGE,
-				page: Number(input.page.params.pageNumber)
+				page: Number(input.page.params.pageNumber),
+				orderings: '[document.first_publication_date desc]'
 			});
 
 			return {
