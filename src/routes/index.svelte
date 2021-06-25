@@ -41,6 +41,11 @@
 			>This week's finds (Week 1)
 		</a>
 	</li>
+	<li class="featuredPosts__element">
+		<a sveltekit:prefetch class="link" href="/blog/post/likes-and-dislikes-svelte"
+			>Likes & Dislikes - Svelte
+		</a>
+	</li>
 </ul>
 
 <style>
