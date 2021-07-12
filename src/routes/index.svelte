@@ -49,7 +49,7 @@
 	.photo {
 		display: none;
 		background-color: white;
-		margin: 10px;
+		margin: 0.625rem;
 	}
 
 	.featuredPosts {
