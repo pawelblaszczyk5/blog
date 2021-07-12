@@ -27,3 +27,7 @@ You can look at it online [here](https://pawel-blaszczyk-blog.netlify.app/). I w
 ## Feedback and contributions
 
 Any feedback and contributions are welcome, feel free to open issue, pull request or just contact with me.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
