@@ -16,7 +16,4 @@
 	/>
 	<meta property="og:title" content="{title} | Paweł Błaszczyk" />
 	<meta property="og:description" content={description} />
-	<meta property="og:site_name" content="Paweł Błaszczyk Blog" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="https://pawel-blaszczyk-blog.netlify.app/" />
 </svelte:head>
