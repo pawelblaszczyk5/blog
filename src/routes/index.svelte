@@ -29,6 +29,11 @@
 <h2>Featured posts</h2>
 <ul class="featuredPosts">
 	<li class="featuredPosts__element">
+		<a sveltekit:prefetch class="link" href="/blog/post/this-weeks-finds-week-3"
+			>This week's finds (Week 3)
+		</a>
+	</li>
+	<li class="featuredPosts__element">
 		<a sveltekit:prefetch class="link" href="/blog/post/this-weeks-finds-week-2"
 			>This week's finds (Week 2)
 		</a>
@@ -37,14 +42,6 @@
 		<a sveltekit:prefetch class="link" href="/blog/post/likes-and-dislikes-svelte"
 			>Likes & Dislikes - Svelte
 		</a>
-	</li>
-	<li class="featuredPosts__element">
-		<a
-			sveltekit:prefetch
-			class="link"
-			href="/blog/post/how-i-became-a-better-developer-through-coding-emails"
-			>How I became a better developer through coding emails</a
-		>
 	</li>
 </ul>
 
