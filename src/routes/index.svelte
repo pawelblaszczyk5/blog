@@ -34,8 +34,11 @@
 		</a>
 	</li>
 	<li class="featuredPosts__element">
-		<a sveltekit:prefetch class="link" href="/blog/post/this-weeks-finds-week-2"
-			>This week's finds (Week 2)
+		<a
+			sveltekit:prefetch
+			class="link"
+			href="/blog/post/accessibility-tips-that-you-can-implement-today"
+			>Accessibility tips that you can implement today
 		</a>
 	</li>
 	<li class="featuredPosts__element">
