@@ -29,8 +29,8 @@
 <h2>Featured posts</h2>
 <ul class="featuredPosts">
 	<li class="featuredPosts__element">
-		<a sveltekit:prefetch class="link" href="/blog/post/this-weeks-finds-week-3"
-			>This week's finds (Week 3)
+		<a sveltekit:prefetch class="link" href="/blog/post/this-weeks-finds-week-4"
+			>This week's finds (Week 4)
 		</a>
 	</li>
 	<li class="featuredPosts__element">
