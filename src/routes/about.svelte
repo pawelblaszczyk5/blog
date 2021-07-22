@@ -32,13 +32,14 @@
 		target="_blank"
 		href="https://www.instagram.com/ada_guzik/"
 		rel="external"
-		class="link placesList__link">here</a
+		class="link">here</a
 	>.
 </p>
 
 <style>
 	.placesList {
 		list-style-position: inside;
+		margin-bottom: 1rem;
 	}
 
 	.placesList__link {
