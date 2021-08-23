@@ -68,8 +68,6 @@ body {
 body.dark {
 	--backgroundColor: #011627;
 	--fontColor: #fdfffc;
-	--primaryAccentColor: #e71d36;
-	--secondaryAccentColor: #2ec4b6;
 }
 
 a.link {
