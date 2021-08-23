@@ -37,13 +37,16 @@
 		<a
 			sveltekit:prefetch
 			class="link"
-			href="/blog/post/accessibility-tips-that-you-can-implement-today"
-			>Accessibility tips that you can implement today
+			href="/blog/post/downhills-of-updating-enterprise-sized-angular-application"
+			>Downhills of updating enterprise-sized Angular application
 		</a>
 	</li>
 	<li class="featuredPosts__element">
-		<a sveltekit:prefetch class="link" href="/blog/post/likes-and-dislikes-svelte"
-			>Likes & Dislikes - Svelte
+		<a
+			sveltekit:prefetch
+			class="link"
+			href="/blog/post/accessibility-tips-that-you-can-implement-today"
+			>Accessibility tips that you can implement today
 		</a>
 	</li>
 </ul>
