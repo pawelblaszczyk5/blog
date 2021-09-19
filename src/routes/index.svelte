@@ -29,6 +29,11 @@
 <h2>Featured posts</h2>
 <ul class="featuredPosts">
 	<li class="featuredPosts__element">
+		<a sveltekit:prefetch class="link" href="/blog/post/how-to-dont-test-the-frontend"
+			>How to don't test the frontend
+		</a>
+	</li>
+	<li class="featuredPosts__element">
 		<a sveltekit:prefetch class="link" href="/blog/post/likes-and-dislikes-angular">
 			Likes & Dislikes - Angular
 		</a>
@@ -39,14 +44,6 @@
 			class="link"
 			href="/blog/post/downhills-of-updating-enterprise-sized-angular-application"
 			>Downhills of updating enterprise-sized Angular application
-		</a>
-	</li>
-	<li class="featuredPosts__element">
-		<a
-			sveltekit:prefetch
-			class="link"
-			href="/blog/post/accessibility-tips-that-you-can-implement-today"
-			>Accessibility tips that you can implement today
 		</a>
 	</li>
 </ul>
